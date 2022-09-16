@@ -1,5 +1,6 @@
 import { Atendimento } from "./src/classes/atendimento.js";
 import { Cliente } from "./src/classes/cliente.js";
+import { Externo } from "./src/namespace/cliente.js";
 import { Diaria } from "./src/classes/diaria.js";
 // import { Diarista } from "./src/classes/diarista.js";
 import { Saldo } from "./src/interface/saldo.js";
@@ -25,10 +26,10 @@ import { Saldo } from "./src/interface/saldo.js";
 // diarista.sacar(50);
 // console.log(diarista);
 
-let cliente = new Cliente("Paulo", 123, "av.Paulista");
+// let cliente = new Cliente("Paulo", 123, "av.Paulista");
 
-cliente.saldo = 15;
-console.log(cliente);
+// cliente.saldo = 15;
+// console.log(cliente);
 
 // cliente.depositar(100);
 
@@ -40,3 +41,10 @@ console.log(cliente);
 
 // realizarDeposito(diarista, 100) ;
 // console.log(diarista)
+
+let cliente = new Cliente('Paulo', 123, 'Av Paulista')
+let clienteExterno = new Externo.Cliente();
+clienteExterno.autorizado = true
+
+console.log(cliente);
+console.log(clienteExterno);
