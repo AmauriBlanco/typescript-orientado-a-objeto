@@ -1,7 +1,8 @@
 import { Atendimento } from "./src/classes/atendimento.js";
 import { Cliente } from "./src/classes/cliente.js";
 import { Diaria } from "./src/classes/diaria.js";
-import { Diarista } from "./src/classes/diarista.js";
+// import { Diarista } from "./src/classes/diarista.js";
+import { Saldo } from "./src/interface/saldo.js";
 
 // let diarista = new Diarista("Paulo", 99999999999, "Av Teste n123");
 // diarista.chavePix = "chave@chave";
@@ -18,13 +19,24 @@ import { Diarista } from "./src/classes/diarista.js";
 // diaria.definirValor(500)
 // console.log(diaria);
 
-let diarista = new Diarista('Paulo', 123, 'av.Paulista' )
-diarista.depositar(100);
-diarista.depositar(50);
-diarista.sacar(50);
-console.log(diarista);
+// let diarista = new Diarista('Paulo', 123, 'av.Paulista' )
+// diarista.depositar(100);
+// diarista.depositar(50);
+// diarista.sacar(50);
+// console.log(diarista);
 
 let cliente = new Cliente("Paulo", 123, "av.Paulista");
-cliente.depositar(100);
 
-console.log(cliente)
+cliente.saldo = 15;
+console.log(cliente);
+
+// cliente.depositar(100);
+
+// console.log(cliente)
+
+// function realizarDeposito(pessoa: Saldo, valor: number){
+//     pessoa.depositar(valor);
+// }
+
+// realizarDeposito(diarista, 100) ;
+// console.log(diarista)
